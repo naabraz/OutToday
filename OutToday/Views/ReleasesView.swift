@@ -1,16 +1,15 @@
 import SwiftUI
 
-struct ContentView: View {
+struct ReleasesView: View {
   let release: ReleaseDetails = ReleaseProvider.getRelease()
 
   var body: some View {
-    Text(release.title)
-      .padding()
+    ReleaseListView()
   }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ReleasesView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+    ReleasesView()
   }
 }
