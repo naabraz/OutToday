@@ -1,15 +1,9 @@
 import Foundation
 
 public struct ReleaseProvider {
-  static func formatDate() -> String {
-    let date = Date()
-    let dateFormatter = DateFormatter()
+  static func getRelease() -> ReleaseDetails {
+    let date = DateHelper.formatDate()
     
-    dateFormatter.locale = Locale(identifier: "pt_BR")
-    dateFormatter.setLocalizedDateFormatFromTemplate("dd-MM")
-    
-    let formattedDate = dateFormatter.string(from: date).replacingOccurrences(of: "/", with: "")
-    
-    return formattedDate
+    return Releases.allReleases[date] ?? Releases.emptyRelease
   }
 }

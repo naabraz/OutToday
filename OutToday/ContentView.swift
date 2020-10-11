@@ -1,8 +1,10 @@
 import SwiftUI
 
 struct ContentView: View {
+  let release: ReleaseDetails = ReleaseProvider.getRelease()
+
   var body: some View {
-    Text("Hello, world!")
+    Text(release.title)
       .padding()
   }
 }

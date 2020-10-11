@@ -1,6 +1,6 @@
 public struct Releases {
   static let allReleases = [
-    "1110": ReleaseDetails(
+    "0409": ReleaseDetails(
       date: "04 September 2015",
       title: "The Book of Souls",
       producers: "Kevin Shirley, Steve Harris",
@@ -15,4 +15,12 @@ public struct Releases {
       recorded: "Compass Point Studios, The Cave Studios"
     )
   ]
+  
+  static let emptyRelease = ReleaseDetails(
+    date: "Empty",
+    title: "No release today :(",
+    producers: "Empty",
+    studio: "Empty",
+    recorded: "Empty"
+  )
 }
