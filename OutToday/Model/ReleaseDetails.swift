@@ -1,14 +1,14 @@
 import Foundation
 
 public struct ReleaseDetails {
-  public let date: Date
+  public let date: String
   public let title: String
   public let producers: String
   public let studio: String
   public let recorded: String
   public let url: URL?
   
-  init(date: Date, title: String, producers: String, studio: String, recorded: String) {
+  init(date: String, title: String, producers: String, studio: String, recorded: String) {
     self.date = date
     self.title = title
     self.producers = producers
