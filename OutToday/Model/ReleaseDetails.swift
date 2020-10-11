@@ -14,7 +14,7 @@ public struct ReleaseDetails {
     self.producers = producers
     self.studio = studio
     self.recorded = recorded
-    self.url = URL(string: "emoji://\(title.filter { !$0.isWhitespace })")
+    self.url = URL(string: "release://\(title.filter { !$0.isWhitespace })")
   }
 }
 
