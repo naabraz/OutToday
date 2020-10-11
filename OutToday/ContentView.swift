@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  OutToday
-//
-//  Created by Natalia Braz on 11/10/20.
-//
-
 import SwiftUI
 
 struct ContentView: View {
