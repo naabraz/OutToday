@@ -12,7 +12,9 @@ struct ReleaseListView: View {
             showingDetails.toggle()
           }, label: {
             ReleaseItemView(title: releaseDetails.title)
-          })
+          }).sheet(isPresented: $showingDetails) {
+            ReleaseDetailsView(details: releaseDetails)
+          }
         }
       }
       .foregroundColor(.black)
