@@ -4,7 +4,7 @@ import SwiftUI
 struct OutTodayApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      ReleasesView()
     }
   }
 }
