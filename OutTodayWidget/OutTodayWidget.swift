@@ -1,31 +1,24 @@
-//
-//  OutTodayWidget.swift
-//  OutTodayWidget
-//
-//  Created by Natalia Braz on 11/10/20.
-//
-
 import WidgetKit
 import SwiftUI
 
-struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date())
+struct OutTodayWidgetProvider: TimelineProvider {
+    func placeholder(in context: Context) -> OutTodayWidgetEntry {
+      OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getRelease())
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date())
+    func getSnapshot(in context: Context, completion: @escaping (OutTodayWidgetEntry) -> ()) {
+        let entry = OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getRelease())
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
+        var entries: [OutTodayWidgetEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate)
+          let entry = OutTodayWidgetEntry(date: entryDate, release: ReleaseProvider.getRelease())
             entries.append(entry)
         }
 
@@ -34,34 +27,42 @@ struct Provider: TimelineProvider {
     }
 }
 
-struct SimpleEntry: TimelineEntry {
-    let date: Date
+struct OutTodayWidgetEntry: TimelineEntry {
+  let date: Date
+  let release: ReleaseDetails
 }
 
 struct OutTodayWidgetEntryView : View {
-    var entry: Provider.Entry
-
-    var body: some View {
-        Text(entry.date, style: .time)
+  var entry: OutTodayWidgetProvider.Entry
+  
+  var body: some View {
+    HStack {
+      Image(entry.release.image)
+        .resizable()
+        .frame(width: 32, height: 32)
+      Text(entry.release.title)
+        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
     }
+  }
 }
+
 
 @main
 struct OutTodayWidget: Widget {
-    let kind: String = "OutTodayWidget"
+    let kind: String = "Out Today Widget"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+        StaticConfiguration(kind: kind, provider: OutTodayWidgetProvider()) { entry in
             OutTodayWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Out Today Widget")
+        .description("Displays Iron Maiden release for today.")
     }
 }
 
 struct OutTodayWidget_Previews: PreviewProvider {
     static var previews: some View {
-        OutTodayWidgetEntryView(entry: SimpleEntry(date: Date()))
+        OutTodayWidgetEntryView(entry: OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getRelease()))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

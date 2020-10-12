@@ -1,6 +1,6 @@
 public struct Releases {
   static let allReleases = [
-    "0409": ReleaseDetails(
+    "1110": ReleaseDetails(
       date: "04 September 2015",
       title: "The Book of Souls",
       producers: "Kevin Shirley, Steve Harris",
