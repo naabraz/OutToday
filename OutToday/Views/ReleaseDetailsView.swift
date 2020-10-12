@@ -53,7 +53,8 @@ struct ReleaseDetailsView_Previews: PreviewProvider {
       producers: "Kevin Shirley, Steve Harris",
       studio: "Parlophone, Sanctuary Copyrights/BMG (US)",
       recorded: "Guillaume Tell Studios",
-      image: "album-the-book-of-souls"
+      image: "album-the-book-of-souls",
+      key: "0000"
     )
 
     ReleaseDetailsView(details: releasePreview)

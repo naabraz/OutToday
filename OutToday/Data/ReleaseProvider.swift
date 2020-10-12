@@ -15,7 +15,8 @@ public struct ReleaseProvider {
         producers: "\($0.value.producers)",
         studio: "\($0.value.studio)",
         recorded: "\($0.value.recorded)",
-        image: "\($0.value.image)"
+        image: "\($0.value.image)",
+        key: "\($0.value.key)"
       )
     }
     

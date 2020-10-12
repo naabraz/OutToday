@@ -6,7 +6,8 @@ public struct Releases {
       producers: "Kevin Shirley, Steve Harris",
       studio: "Parlophone, Sanctuary Copyrights/BMG (US)",
       recorded: "Guillaume Tell Studios",
-      image: "album-the-book-of-souls"
+      image: "album-the-book-of-souls",
+      key: "1110"
     ),
     "1210": ReleaseDetails(
       date: "16 August 2010",
@@ -14,7 +15,8 @@ public struct Releases {
       producers: "Kevin Shirley, Steve Harris",
       studio: "EMI UME, Sony (United States)",
       recorded: "Compass Point Studios, The Cave Studios",
-      image: "album-final-frontier"
+      image: "album-final-frontier",
+      key: "1210"
     )
   ]
   
@@ -24,6 +26,7 @@ public struct Releases {
     producers: "Empty",
     studio: "Empty",
     recorded: "Empty",
-    image: "Empty"
+    image: "Empty",
+    key: "0000"
   )
 }

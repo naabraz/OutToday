@@ -7,6 +7,7 @@ public struct ReleaseDetails {
   public let studio: String
   public let recorded: String
   public let image: String
+  public let key: String
   public let url: URL?
   
   init(
@@ -15,7 +16,8 @@ public struct ReleaseDetails {
     producers: String,
     studio: String,
     recorded: String,
-    image: String
+    image: String,
+    key: String
   ) {
     self.date = date
     self.title = title
@@ -23,6 +25,7 @@ public struct ReleaseDetails {
     self.studio = studio
     self.recorded = recorded
     self.image = image
+    self.key = key
     self.url = URL(string: "release://\(title.filter { !$0.isWhitespace })")
   }
 }
