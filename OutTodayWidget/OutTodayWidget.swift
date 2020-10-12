@@ -43,7 +43,7 @@ struct OutTodayWidgetEntryView : View {
 
 @main
 struct OutTodayWidget: Widget {
-  let kind: String = "Out Today Widget"
+  let kind: String = "OutTodayWidget"
   
   var body: some WidgetConfiguration {
     StaticConfiguration(kind: kind, provider: OutTodayWidgetProvider()) { entry in
