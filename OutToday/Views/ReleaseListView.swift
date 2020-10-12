@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ReleaseListView: View {
-  let releases = ReleaseProvider.getAllReleases()
+  let releases = Releases.allReleases
   @State private var showingDetails = false
   
   var body: some View {
