@@ -17,6 +17,7 @@
 		9C9A3C512533BE2E007D688F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A3C502533BE2E007D688F /* Date.swift */; };
 		9C9A3C552533C039007D688F /* ReleaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A3C542533C039007D688F /* ReleaseListView.swift */; };
 		9C9A3C5B2533C9B5007D688F /* ReleaseDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A3C5A2533C9B5007D688F /* ReleaseDetailsView.swift */; };
+		9C9A3C5F2533DEA3007D688F /* ReleaseItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A3C5E2533DEA3007D688F /* ReleaseItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9C9A3C502533BE2E007D688F /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		9C9A3C542533C039007D688F /* ReleaseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseListView.swift; sourceTree = "<group>"; };
 		9C9A3C5A2533C9B5007D688F /* ReleaseDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseDetailsView.swift; sourceTree = "<group>"; };
+		9C9A3C5E2533DEA3007D688F /* ReleaseItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				9C9A3C312533A3DA007D688F /* ReleasesView.swift */,
 				9C9A3C542533C039007D688F /* ReleaseListView.swift */,
 				9C9A3C5A2533C9B5007D688F /* ReleaseDetailsView.swift */,
+				9C9A3C5E2533DEA3007D688F /* ReleaseItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			files = (
 				9C9A3C4B2533BA74007D688F /* Releases.swift in Sources */,
 				9C9A3C512533BE2E007D688F /* Date.swift in Sources */,
+				9C9A3C5F2533DEA3007D688F /* ReleaseItemView.swift in Sources */,
 				9C9A3C472533AB07007D688F /* ReleaseProvider.swift in Sources */,
 				9C9A3C322533A3DA007D688F /* ReleasesView.swift in Sources */,
 				9C9A3C552533C039007D688F /* ReleaseListView.swift in Sources */,

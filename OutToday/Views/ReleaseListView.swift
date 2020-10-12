@@ -11,7 +11,7 @@ struct ReleaseListView: View {
           Button(action: {
             showingDetails.toggle()
           }, label: {
-            ReleaseItemView(title: releaseDetails.title)
+            ReleaseItemView(title: releaseDetails.title, image: releaseDetails.image)
           }).sheet(isPresented: $showingDetails) {
             ReleaseDetailsView(details: releaseDetails)
           }
@@ -21,16 +21,6 @@ struct ReleaseListView: View {
       .listStyle(InsetGroupedListStyle())
       .navigationBarTitle("Iron Maiden Releases")
     }
-  }
-}
-
-struct ReleaseItemView: View {
-  let title: String
-  
-  var body: some View {
-    Text("\(title)")
-      .font(.title3)
-      .padding([.top, .bottom])
   }
 }
 
