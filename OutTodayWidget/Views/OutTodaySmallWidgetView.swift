@@ -19,11 +19,12 @@ struct NumberOfReleases: View {
 struct OutTodaySmallWidgetView: View {
   let randomRelease: RandomReleaseofTheDay
   
-  var body: some View {    
+  var body: some View {
     HStack {
       Image(randomRelease.release.image)
         .resizable()
         .overlay(NumberOfReleases(numberOfReleases: randomRelease.numberOfReleases), alignment: .bottomTrailing)
     }
+    .widgetURL(randomRelease.release.url)
   }
 }

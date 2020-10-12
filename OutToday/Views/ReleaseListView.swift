@@ -2,25 +2,30 @@ import SwiftUI
 
 struct ReleaseListView: View {
   let releases = Releases.allReleases
-  @State private var showingDetails = false
+  @State private var visibleReleaseDetails: ReleaseDetails?
   
   var body: some View {
     NavigationView {
       List {
         ForEach(releases) { releaseDetails in
           Button(action: {
-            showingDetails.toggle()
+            visibleReleaseDetails = releaseDetails
           }, label: {
             ReleaseItemView(title: releaseDetails.title, image: releaseDetails.image)
-          }).sheet(isPresented: $showingDetails) {
-            ReleaseDetailsView(details: releaseDetails)
-          }
+          })
         }
       }
       .foregroundColor(.black)
       .listStyle(InsetGroupedListStyle())
       .navigationBarTitle("Iron Maiden Releases")
     }
+    .onOpenURL { url in
+      guard let releaseDetails = releases.first(where: { $0.url == url }) else { return }
+      visibleReleaseDetails = releaseDetails
+    }
+    .sheet(item: $visibleReleaseDetails, content: { releaseDetails in
+      ReleaseDetailsView(details: releaseDetails)
+    })
   }
 }
 
