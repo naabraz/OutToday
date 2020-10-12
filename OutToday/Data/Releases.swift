@@ -8,7 +8,7 @@ public struct Releases {
       recorded: "Guillaume Tell Studios",
       image: "album-the-book-of-souls"
     ),
-    "1608": ReleaseDetails(
+    "1210": ReleaseDetails(
       date: "16 August 2010",
       title: "The Final Frontier",
       producers: "Kevin Shirley, Steve Harris",

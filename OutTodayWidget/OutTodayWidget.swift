@@ -2,29 +2,29 @@ import WidgetKit
 import SwiftUI
 
 struct OutTodayWidgetProvider: TimelineProvider {
-    func placeholder(in context: Context) -> OutTodayWidgetEntry {
-      OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getRelease())
+  func placeholder(in context: Context) -> OutTodayWidgetEntry {
+    OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getRelease())
+  }
+  
+  func getSnapshot(in context: Context, completion: @escaping (OutTodayWidgetEntry) -> ()) {
+    let entry = OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getRelease())
+    completion(entry)
+  }
+  
+  func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    var entries: [OutTodayWidgetEntry] = []
+    
+    // Generate a timeline consisting of five entries an hour apart, starting from the current date.
+    let currentDate = Date()
+    for hourOffset in 0 ..< 5 {
+      let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
+      let entry = OutTodayWidgetEntry(date: entryDate, release: ReleaseProvider.getRelease())
+      entries.append(entry)
     }
-
-    func getSnapshot(in context: Context, completion: @escaping (OutTodayWidgetEntry) -> ()) {
-        let entry = OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getRelease())
-        completion(entry)
-    }
-
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [OutTodayWidgetEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-          let entry = OutTodayWidgetEntry(date: entryDate, release: ReleaseProvider.getRelease())
-            entries.append(entry)
-        }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
-    }
+    
+    let timeline = Timeline(entries: entries, policy: .atEnd)
+    completion(timeline)
+  }
 }
 
 struct OutTodayWidgetEntry: TimelineEntry {
@@ -36,33 +36,27 @@ struct OutTodayWidgetEntryView : View {
   var entry: OutTodayWidgetProvider.Entry
   
   var body: some View {
-    HStack {
-      Image(entry.release.image)
-        .resizable()
-        .frame(width: 32, height: 32)
-      Text(entry.release.title)
-        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-    }
+    OutTodaySmallWidget(release: entry.release)
   }
 }
 
 
 @main
 struct OutTodayWidget: Widget {
-    let kind: String = "Out Today Widget"
-
-    var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: OutTodayWidgetProvider()) { entry in
-            OutTodayWidgetEntryView(entry: entry)
-        }
-        .configurationDisplayName("Out Today Widget")
-        .description("Displays Iron Maiden release for today.")
+  let kind: String = "Out Today Widget"
+  
+  var body: some WidgetConfiguration {
+    StaticConfiguration(kind: kind, provider: OutTodayWidgetProvider()) { entry in
+      OutTodayWidgetEntryView(entry: entry)
     }
+    .configurationDisplayName("Out Today Widget")
+    .description("Displays Iron Maiden release for today.")
+  }
 }
 
 struct OutTodayWidget_Previews: PreviewProvider {
-    static var previews: some View {
-        OutTodayWidgetEntryView(entry: OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getRelease()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-    }
+  static var previews: some View {
+    OutTodayWidgetEntryView(entry: OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getRelease()))
+      .previewContext(WidgetPreviewContext(family: .systemSmall))
+  }
 }
