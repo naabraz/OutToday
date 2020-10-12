@@ -120,14 +120,14 @@
 		9C9A3C2E2533A3D9007D688F /* OutToday */ = {
 			isa = PBXGroup;
 			children = (
-				9C9A3C532533C023007D688F /* Views */,
-				9C9A3C4F2533BE21007D688F /* Helpers */,
-				9C9A3C452533AAF2007D688F /* Data */,
-				9C9A3C412533A72A007D688F /* Model */,
+				9C9A3C382533A3DC007D688F /* Info.plist */,
 				9C9A3C2F2533A3D9007D688F /* OutTodayApp.swift */,
 				9C9A3C332533A3DC007D688F /* Assets.xcassets */,
-				9C9A3C382533A3DC007D688F /* Info.plist */,
+				9C9A3C452533AAF2007D688F /* Data */,
+				9C9A3C4F2533BE21007D688F /* Helpers */,
+				9C9A3C412533A72A007D688F /* Model */,
 				9C9A3C352533A3DC007D688F /* Preview Content */,
+				9C9A3C532533C023007D688F /* Views */,
 			);
 			path = OutToday;
 			sourceTree = "<group>";
@@ -188,10 +188,10 @@
 		9C9A3C6C2533E055007D688F /* OutTodayWidget */ = {
 			isa = PBXGroup;
 			children = (
-				9CC014062533E5AC005DEFDD /* Views */,
+				9C9A3C712533E056007D688F /* Info.plist */,
 				9C9A3C6D2533E055007D688F /* OutTodayWidget.swift */,
 				9C9A3C6F2533E056007D688F /* Assets.xcassets */,
-				9C9A3C712533E056007D688F /* Info.plist */,
+				9CC014062533E5AC005DEFDD /* Views */,
 			);
 			path = OutTodayWidget;
 			sourceTree = "<group>";
