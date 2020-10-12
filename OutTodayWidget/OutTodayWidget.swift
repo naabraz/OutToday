@@ -3,11 +3,11 @@ import SwiftUI
 
 struct OutTodayWidgetProvider: TimelineProvider {
   func placeholder(in context: Context) -> OutTodayWidgetEntry {
-    OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getRelease())
+    OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getReleasesOfTheDay())
   }
 
   func getSnapshot(in context: Context, completion: @escaping (OutTodayWidgetEntry) -> ()) {
-    let entry = OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getRelease())
+    let entry = OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getReleasesOfTheDay())
     completion(entry)
   }
 
@@ -18,7 +18,7 @@ struct OutTodayWidgetProvider: TimelineProvider {
     let currentDate = Date()
     for hourOffset in 0 ..< 5 {
       let entryDate = Calendar.current.date(byAdding: .minute, value: hourOffset, to: currentDate)!
-      let entry = OutTodayWidgetEntry(date: entryDate, release: ReleaseProvider.getRelease())
+      let entry = OutTodayWidgetEntry(date: entryDate, release: ReleaseProvider.getReleasesOfTheDay())
       entries.append(entry)
     }
 
@@ -29,14 +29,14 @@ struct OutTodayWidgetProvider: TimelineProvider {
 
 struct OutTodayWidgetEntry: TimelineEntry {
   let date: Date
-  let release: ReleaseDetails
+  let release: RandomReleaseofTheDay
 }
 
 struct OutTodayWidgetEntryView : View {
   var entry: OutTodayWidgetProvider.Entry
 
   var body: some View {
-    OutTodaySmallWidget(release: entry.release)
+    OutTodaySmallWidget(randomRelease: entry.release)
   }
 }
 
@@ -56,7 +56,7 @@ struct OutTodayWidget: Widget {
 
 struct OutTodayWidget_Previews: PreviewProvider {
   static var previews: some View {
-    OutTodayWidgetEntryView(entry: OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getRelease()))
+    OutTodayWidgetEntryView(entry: OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getReleasesOfTheDay()))
       .previewContext(WidgetPreviewContext(family: .systemSmall))
   }
 }

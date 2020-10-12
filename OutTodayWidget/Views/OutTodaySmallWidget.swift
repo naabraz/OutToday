@@ -16,13 +16,13 @@ struct NumberOfReleases: View {
 }
 
 struct OutTodaySmallWidget: View {
-  let release: ReleaseDetails
+  let randomRelease: RandomReleaseofTheDay
   
   var body: some View {    
     HStack {
-      Image(release.image)
+      Image(randomRelease.release.image)
         .resizable()
-        .overlay(NumberOfReleases(numberOfReleases: 2), alignment: .bottomTrailing)
+        .overlay(NumberOfReleases(numberOfReleases: randomRelease.numberOfReleases), alignment: .bottomTrailing)
     }
   }
 }

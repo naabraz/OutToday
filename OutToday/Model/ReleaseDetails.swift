@@ -30,6 +30,19 @@ public struct ReleaseDetails {
   }
 }
 
+public struct RandomReleaseofTheDay {
+  public let release: ReleaseDetails
+  public let numberOfReleases: Int
+  
+  init(
+    release: ReleaseDetails,
+    numberOfReleases: Int
+  ) {
+    self.release = release
+    self.numberOfReleases = numberOfReleases
+  }
+}
+
 extension ReleaseDetails: Identifiable {
   public var id: String {
     title
