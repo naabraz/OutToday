@@ -6,16 +6,17 @@ struct NumberOfReleases: View {
   var body: some View {
     ZStack {
       Text(String(numberOfReleases))
+        .font(.caption)
         .bold()
         .padding(6)
-        .foregroundColor(.black)
-    }.background(Color.white)
+        .foregroundColor(.white)
+    }.background(Color.black)
     .cornerRadius(8)
     .padding(8)
   }
 }
 
-struct OutTodaySmallWidget: View {
+struct OutTodaySmallWidgetView: View {
   let randomRelease: RandomReleaseofTheDay
   
   var body: some View {    

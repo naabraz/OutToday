@@ -5,15 +5,15 @@ struct OutTodayWidgetProvider: TimelineProvider {
   func placeholder(in context: Context) -> OutTodayWidgetEntry {
     OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getReleasesOfTheDay())
   }
-
+  
   func getSnapshot(in context: Context, completion: @escaping (OutTodayWidgetEntry) -> ()) {
     let entry = OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getReleasesOfTheDay())
     completion(entry)
   }
-
+  
   func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
     var entries: [OutTodayWidgetEntry] = []
-
+    
     // Generate a timeline consisting of five entries an minute apart, starting from the current date.
     let currentDate = Date()
     for hourOffset in 0 ..< 5 {
@@ -21,7 +21,7 @@ struct OutTodayWidgetProvider: TimelineProvider {
       let entry = OutTodayWidgetEntry(date: entryDate, release: ReleaseProvider.getReleasesOfTheDay())
       entries.append(entry)
     }
-
+    
     let timeline = Timeline(entries: entries, policy: .atEnd)
     completion(timeline)
   }
@@ -34,9 +34,9 @@ struct OutTodayWidgetEntry: TimelineEntry {
 
 struct OutTodayWidgetEntryView : View {
   var entry: OutTodayWidgetProvider.Entry
-
+  
   var body: some View {
-    OutTodaySmallWidget(randomRelease: entry.release)
+    OutTodaySmallWidgetView(randomRelease: entry.release)
   }
 }
 
@@ -44,7 +44,7 @@ struct OutTodayWidgetEntryView : View {
 @main
 struct OutTodayWidget: Widget {
   let kind: String = "OutTodayWidget"
-
+  
   var body: some WidgetConfiguration {
     StaticConfiguration(kind: kind, provider: OutTodayWidgetProvider()) { entry in
       OutTodayWidgetEntryView(entry: entry)
