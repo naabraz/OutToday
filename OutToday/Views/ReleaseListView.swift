@@ -15,7 +15,7 @@ struct ReleaseListView: View {
           })
         }
       }
-      .foregroundColor(.black)
+      .foregroundColor(.primary)
       .listStyle(InsetGroupedListStyle())
       .navigationBarTitle("Iron Maiden Releases")
     }

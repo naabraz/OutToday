@@ -7,7 +7,7 @@ public struct Releases {
       studio: "Parlophone, Sanctuary Copyrights/BMG (US)",
       recorded: "Guillaume Tell Studios",
       image: "album-the-book-of-souls",
-      key: "1210"
+      key: "0409"
     ),
     ReleaseDetails(
       date: "16 August 2010",
@@ -16,7 +16,7 @@ public struct Releases {
       studio: "EMI UME, Sony (United States)",
       recorded: "Compass Point Studios, The Cave Studios",
       image: "album-final-frontier",
-      key: "1210"
+      key: "1608"
     )
   ]
   

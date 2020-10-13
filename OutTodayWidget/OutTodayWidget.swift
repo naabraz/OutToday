@@ -36,7 +36,11 @@ struct OutTodayWidgetEntryView : View {
   var entry: OutTodayWidgetProvider.Entry
   
   var body: some View {
-    OutTodaySmallWidgetView(randomRelease: entry.release)
+    if entry.release.numberOfReleases > 0 {
+      OutTodaySmallWidgetView(randomRelease: entry.release)
+    } else {
+      OutTodaySmallWidgetEmptyView()
+    }
   }
 }
 

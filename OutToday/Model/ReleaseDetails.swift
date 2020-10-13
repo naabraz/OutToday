@@ -35,10 +35,10 @@ public struct RandomReleaseofTheDay {
   public let numberOfReleases: Int
   
   init(
-    release: ReleaseDetails,
+    release: ReleaseDetails? = nil,
     numberOfReleases: Int
   ) {
-    self.release = release
+    self.release = release ?? ReleaseDetails(date: "", title: "", producers: "", studio: "", recorded: "", image: "", key: "")
     self.numberOfReleases = numberOfReleases
   }
 }
