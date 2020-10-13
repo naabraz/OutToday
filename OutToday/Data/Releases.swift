@@ -19,14 +19,4 @@ public struct Releases {
       key: "1608"
     )
   ]
-  
-  static let emptyRelease = ReleaseDetails(
-    date: "Empty",
-    title: "No release today :(",
-    producers: "Empty",
-    studio: "Empty",
-    recorded: "Empty",
-    image: "Empty",
-    key: "0000"
-  )
 }
