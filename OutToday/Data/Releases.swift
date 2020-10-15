@@ -16,7 +16,7 @@ public struct Releases {
       studio: "EMI UME, Sony (United States)",
       recorded: "Compass Point Studios, The Cave Studios",
       image: "album-final-frontier",
-      key: "1608"
+      key: "1510"
     )
   ]
 }

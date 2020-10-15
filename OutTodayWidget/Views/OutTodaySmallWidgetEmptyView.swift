@@ -8,5 +8,6 @@ struct OutTodaySmallWidgetEmptyView: View {
         .resizable()
         .scaledToFill()
     }
+    .widgetURL(URL(string: "release://404"))
   }
 }
