@@ -52,8 +52,9 @@ struct OutTodayWidget: Widget {
     StaticConfiguration(kind: kind, provider: OutTodayWidgetProvider()) { entry in
       OutTodayWidgetEntryView(entry: entry)
     }
-    .configurationDisplayName("Out Today Widget")
-    .description("Displays Iron Maiden release for today.")
+    .configurationDisplayName("Out Today")
+    .description("Displays an Iron Maiden release on this day.")
+    .supportedFamilies([.systemSmall])
   }
 }
 
