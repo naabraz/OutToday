@@ -1,17 +1,53 @@
 import SwiftUI
 import WidgetKit
 
-struct OutTodayMediumWidgetView: View {
-  let allReleases: [ReleaseDetails]
-  
+struct MultipleReleaseView: View {
+  let releases: [ReleaseDetails]
+
   var body: some View {
     HStack(alignment: .firstTextBaseline) {
-      ForEach(allReleases) { release in
+      ForEach(releases) { release in
         Image(release.image)
           .resizable()
       }
     }
     .background(Color.black)
+  }
+}
+
+struct SingleReleaseView: View {
+  let release: ReleaseDetails
+  
+  var body: some View {
+    HStack() {
+      Image(release.image)
+        .resizable()
+        .aspectRatio(contentMode: .fit)
+        .offset(x: -18)
+      VStack(alignment: .leading) {
+        Text(release.title)
+          .font(.body)
+          .foregroundColor(.white)
+          .padding(.bottom, 5)
+        Text(release.date)
+          .font(.caption)
+          .foregroundColor(.white)
+      }
+      .padding(.horizontal, 10)
+    }
+    .frame(width: 300)
+    .background(Color.black)
+  }
+}
+
+struct OutTodayMediumWidgetView: View {
+  let releases: [ReleaseDetails]
+  var body: some View {
+    if (releases.count > 1) {
+      MultipleReleaseView(releases: releases)
+    } else {
+      SingleReleaseView(release: releases[0])
+    }
   }
 }
 
@@ -27,19 +63,10 @@ struct OutTodayMediumWidgetView_Previews: PreviewProvider {
         image: "album-final-frontier",
         key: "1608"
       ),
-      ReleaseDetails(
-        date: "04 September 2015",
-        title: "The Book of Souls",
-        producers: "Kevin Shirley, Steve Harris",
-        studio: "Parlophone, Sanctuary Copyrights/BMG (US)",
-        recorded: "Guillaume Tell Studios",
-        image: "album-the-book-of-souls",
-        key: "0409"
-      )
     ]
     
     OutTodayMediumWidgetView(
-      allReleases: allReleases
+      releases: allReleases
     ).previewContext(WidgetPreviewContext(family: .systemMedium))
   }
 }

@@ -5,6 +5,7 @@ struct OutTodayWidgetView: View {
   
   @Environment(\.widgetFamily) var family: WidgetFamily
   let randomRelease: RandomReleaseofTheDay
+  let releases: [ReleaseDetails]
 
   @ViewBuilder
   var body: some View {
@@ -12,7 +13,7 @@ struct OutTodayWidgetView: View {
     case .systemSmall:
       OutTodaySmallWidgetView(randomRelease: randomRelease)
     case .systemMedium:
-      OutTodayMediumWidgetView(allReleases: randomRelease)
+      OutTodayMediumWidgetView(releases: releases)
     @unknown default:
       EmptyView()
     }

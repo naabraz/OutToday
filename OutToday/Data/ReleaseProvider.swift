@@ -1,7 +1,7 @@
 import Foundation
 
 public struct ReleaseProvider {
-  static func getReleasesOfTheDay() -> RandomReleaseofTheDay {
+  static func getRandomRelease() -> RandomReleaseofTheDay {
     let date = DateHelper.formatDate()
     let releases = Releases.allReleases
     var releasesOfTheDay = [ReleaseDetails]()
@@ -29,5 +29,19 @@ public struct ReleaseProvider {
     )
     
     return randomRelease
+  }
+  
+  static func getReleases() -> [ReleaseDetails] {
+    let date = DateHelper.formatDate()
+    let releases = Releases.allReleases
+    var releasesOfTheDay = [ReleaseDetails]()
+
+    releases.forEach { release in
+      if(release.key == date) {
+        releasesOfTheDay.append(release)
+      }
+    }
+
+    return releasesOfTheDay
   }
 }
