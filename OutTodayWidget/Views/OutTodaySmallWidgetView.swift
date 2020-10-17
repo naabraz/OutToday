@@ -5,14 +5,17 @@ struct NumberOfReleases: View {
   
   var body: some View {
     ZStack {
-      Text(String(numberOfReleases))
-        .font(.caption)
-        .bold()
-        .padding(6)
-        .foregroundColor(.white)
-    }.background(Color.black)
-    .cornerRadius(8)
-    .padding(8)
+      if numberOfReleases > 1 {
+        Text(String(numberOfReleases))
+          .font(.caption)
+          .bold()
+          .padding(6)
+          .foregroundColor(.white)
+          .background(Color.black)
+          .cornerRadius(8)
+          .padding(8)
+      }
+    }
   }
 }
 
