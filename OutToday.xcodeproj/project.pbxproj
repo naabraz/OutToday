@@ -30,6 +30,8 @@
 		9C9A3C862533E32F007D688F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A3C502533BE2E007D688F /* Date.swift */; };
 		9CC014032533E55A005DEFDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C9A3C332533A3DC007D688F /* Assets.xcassets */; };
 		9CC0140A2533E6C3005DEFDD /* OutTodaySmallWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC014092533E6C3005DEFDD /* OutTodaySmallWidgetView.swift */; };
+		9CE11B9C253B78C700A11EBB /* OutTodayMediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE11B9B253B78C700A11EBB /* OutTodayMediumWidgetView.swift */; };
+		9CE11BA0253B850400A11EBB /* OutTodayWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE11B9F253B850400A11EBB /* OutTodayWidgetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		9C9A3C6F2533E056007D688F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C9A3C712533E056007D688F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CC014092533E6C3005DEFDD /* OutTodaySmallWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutTodaySmallWidgetView.swift; sourceTree = "<group>"; };
+		9CE11B9B253B78C700A11EBB /* OutTodayMediumWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutTodayMediumWidgetView.swift; sourceTree = "<group>"; };
+		9CE11B9F253B850400A11EBB /* OutTodayWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutTodayWidgetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +207,8 @@
 			children = (
 				9CC014092533E6C3005DEFDD /* OutTodaySmallWidgetView.swift */,
 				9C5A3A2C25351D67005F40A6 /* OutTodaySmallWidgetEmptyView.swift */,
+				9CE11B9B253B78C700A11EBB /* OutTodayMediumWidgetView.swift */,
+				9CE11B9F253B850400A11EBB /* OutTodayWidgetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -326,8 +332,10 @@
 			files = (
 				9C9A3C7B2533E226007D688F /* ReleaseProvider.swift in Sources */,
 				9C9A3C862533E32F007D688F /* Date.swift in Sources */,
+				9CE11B9C253B78C700A11EBB /* OutTodayMediumWidgetView.swift in Sources */,
 				9C5A3A2D25351D67005F40A6 /* OutTodaySmallWidgetEmptyView.swift in Sources */,
 				9C9A3C832533E32A007D688F /* Releases.swift in Sources */,
+				9CE11BA0253B850400A11EBB /* OutTodayWidgetView.swift in Sources */,
 				9C9A3C7E2533E232007D688F /* ReleaseDetails.swift in Sources */,
 				9CC0140A2533E6C3005DEFDD /* OutTodaySmallWidgetView.swift in Sources */,
 				9C9A3C6E2533E055007D688F /* OutTodayWidget.swift in Sources */,

@@ -60,7 +60,12 @@ struct OutTodayWidget: Widget {
 
 struct OutTodayWidget_Previews: PreviewProvider {
   static var previews: some View {
-    OutTodayWidgetEntryView(entry: OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getReleasesOfTheDay()))
-      .previewContext(WidgetPreviewContext(family: .systemSmall))
+    OutTodayWidgetEntryView(
+      entry: OutTodayWidgetEntry(
+        date: Date(),
+        release: ReleaseProvider.getReleasesOfTheDay()
+      )
+    )
+    .previewContext(WidgetPreviewContext(family: .systemSmall))
   }
 }
