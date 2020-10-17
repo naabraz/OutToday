@@ -44,7 +44,6 @@ struct OutTodayWidgetEntryView : View {
   }
 }
 
-
 @main
 struct OutTodayWidget: Widget {
   let kind: String = "OutTodayWidget"
