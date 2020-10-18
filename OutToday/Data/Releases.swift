@@ -143,6 +143,60 @@ public struct Releases {
       recorded: "Kingsway Studios",
       image: "album-iron-maiden",
       key: "1404"
+    ),
+    ReleaseDetails(
+      date: "08 February 1980",
+      title: "Running Free",
+      image: "single-1980-running-free",
+      key: "0802"
+    ),
+    ReleaseDetails(
+      date: "23 May 1980",
+      title: "Sanctuary",
+      image: "single-1980-sanctuary",
+      key: "2305"
+    ),
+    ReleaseDetails(
+      date: "27 October 1980",
+      title: "Women In Uniform",
+      image: "single-1980-women-in-uniform",
+      key: "2710"
+    ),
+    ReleaseDetails(
+      date: "02 March 1981",
+      title: "Twilight Zone",
+      image: "single-1981-twilight-zone",
+      key: "0203"
+    ),
+    ReleaseDetails(
+      date: "15 June 1981",
+      title: "Purgatory",
+      image: "single-1981-purgatory",
+      key: "1506"
+    ),
+    ReleaseDetails(
+      date: "14 September 1981",
+      title: "Maiden Japan 12\"",
+      image: "single-1981-maiden-japan",
+      key: "1409"
+    ),
+    ReleaseDetails(
+      date: "12 February 1982",
+      title: "Run To The Hills",
+      image: "single-1982-run-to-the-hills",
+      key: "1202"
+    ),
+    ReleaseDetails(
+      date: "11 April 1983",
+      title: "Flight Of Icarus",
+      image: "single-1983-flight-of-icarus",
+      key: "1104"
+    ),
+    ReleaseDetails(
+      date: "20 June 1983",
+      title: "The Trooper",
+      image: "single-1983-the-trooper",
+      key: "2006"
     )
   ]
 }
