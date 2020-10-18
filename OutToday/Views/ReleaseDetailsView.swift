@@ -36,7 +36,7 @@ struct ReleaseDetailsView: View {
             Text(details.studio!)
               .padding([.bottom])
           }
-          if ((details.studio) != nil) {
+          if ((details.recorded) != nil) {
             Text("Recorded:")
               .bold()
               .font(.title3)
