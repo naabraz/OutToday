@@ -624,5 +624,92 @@ public struct Releases {
       image: "box-complete-albums-collection",
       key: "1310"
     ),
+    ReleaseDetails(
+      date: "05 September 1994",
+      title: "Raising Hell",
+      studio: "PMI",
+      image: "video-raising-hell",
+      key: "0509"
+    ),
+    ReleaseDetails(
+      date: "05 September 1994",
+      title: "Raising Hell",
+      studio: "PMI",
+      image: "video-raising-hell",
+      key: "0509"
+    ),
+    ReleaseDetails(
+      date: "26 November 2001",
+      title: "Classic Albums: Iron Maiden – The Number of the Beast",
+      studio: "Isis Productions/Eagle Vision",
+      image: "video-the-number",
+      key: "2611"
+    ),
+    ReleaseDetails(
+      date: "16 July 2002",
+      title: "Rock in Rio - video",
+      producers: "Kevin Shirley",
+      studio: "EMI, Sony (US), Portrait Records (US), Sanctuary (video)",
+      recorded: "Rock in Rio Festival",
+      image: "video-rock-in-rio",
+      key: "1607"
+    ),
+    ReleaseDetails(
+      date: "02 June 2003",
+      title: "Visions of the Beast",
+      studio: "EMI",
+      image: "video-visions-of-the-beast",
+      key: "0206"
+    ),
+    ReleaseDetails(
+      date: "08 November 2004",
+      title: "The History of Iron Maiden - Part 1: The Early Days",
+      studio: "EMI",
+      image: "video-the-early-days",
+      key: "0811"
+    ),
+    ReleaseDetails(
+      date: "06 February 2006",
+      title: "Death on the Road",
+      producers: "Kevin Shirley, Steve Harris",
+      studio: "EMI",
+      recorded: "Westfalenhalle Arena, Dortmund, Germany",
+      image: "video-death-on-the-road",
+      key: "0602"
+    ),
+    ReleaseDetails(
+      date: "04 February 2008",
+      title: "Live After Death",
+      studio: "EMI",
+      recorded: "Long Beach Arena, California, Hammersmith Odeon, London",
+      image: "video-live-after-death",
+      key: "0402"
+    ),
+    ReleaseDetails(
+      date: "22 May 2009",
+      title: "Flight 666",
+      studio: "EMI, UMe (United States)",
+      recorded: "Various concerts throughout the first leg of the Somewhere Back in Time World Tour",
+      image: "video-flight-666",
+      key: "2205"
+    ),
+    ReleaseDetails(
+      date: "23 March 2012",
+      title: "EN VIVO!",
+      producers: "Kevin Shirley",
+      studio: "EMI, UME (US)",
+      recorded: "Estadio Nacional Santiago, Chile",
+      image: "video-en-vivo",
+      key: "2303"
+    ),
+    ReleaseDetails(
+      date: "25 March 2013",
+      title: "MAIDEN ENGLAND '88",
+      producers: "Martin Birch, Steve Harris",
+      studio: "PMI",
+      recorded: "National Exhibition Centre, Birmingham",
+      image: "video-maiden-england",
+      key: "2503"
+    ),
   ]
 }
