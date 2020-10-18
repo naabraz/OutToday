@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOSApplicationExtension 14.0, *)
 struct OutTodaySmallWidgetEmptyView: View {
   var body: some View {
     ZStack {
