@@ -488,7 +488,7 @@ public struct Releases {
       key: "2503"
     ),
     ReleaseDetails(
-      date: "4 November 2002",
+      date: "04 November 2002",
       title: "BBC Archives",
       producers: "Tony Wilson",
       recorded: "Collection of songs from three live shows and one live radio broadcast, recorded by the BBC between 1979 and 1988",
@@ -496,7 +496,7 @@ public struct Releases {
       key: "0411"
     ),
     ReleaseDetails(
-      date: "4 November 2002",
+      date: "04 November 2002",
       title: "Beast over Hammersmith",
       producers: "Doug Hall, Steve Harris",
       studio: "EMI",
@@ -556,20 +556,20 @@ public struct Releases {
       key: "1705"
     ),
     ReleaseDetails(
-      date: "4 November 2002",
+      date: "04 November 2002",
       title: "Best of the 'B' Sides",
       image: "comp-best-of-b-sides",
       key: "0411"
     ),
     ReleaseDetails(
-      date: "4 November 2002",
+      date: "04 November 2002",
       title: "Edward the Great: The Greatest Hits",
       studio: "EMI",
       image: "comp-edward-the-great",
       key: "0411"
     ),
     ReleaseDetails(
-      date: "5 July 2005",
+      date: "05 July 2005",
       title: "The Essential Iron Maiden",
       studio: "Sanctuary",
       image: "comp-essential-iron-maiden",
@@ -583,11 +583,46 @@ public struct Releases {
       key: "1205"
     ),
     ReleaseDetails(
-      date: "6 June 2011",
+      date: "06 June 2011",
       title: "From Fear to Eternity The Best of 1990 – 2010",
       studio: "EMI",
       image: "comp-from-fear-to-eternity",
       key: "0606"
+    ),
+    ReleaseDetails(
+      date: "12 February 1990",
+      title: "The First Ten Years",
+      studio: "EMI",
+      image: "box-first-ten-years",
+      key: "1202"
+    ),
+    ReleaseDetails(
+      date: "30 November 1998",
+      title: "Eddie's Head",
+      studio: "EMI",
+      image: "box-eddies-head",
+      key: "3011"
+    ),
+    ReleaseDetails(
+      date: "04 November 2002",
+      title: "Eddie's Archive",
+      studio: "EMI",
+      image: "box-eddies-archive",
+      key: "0411"
+    ),
+    ReleaseDetails(
+      date: "15 October 2012",
+      title: "Picture Disc Collection",
+      studio: "EMI",
+      image: "box-picture-disc-collection",
+      key: "1510"
+    ),
+    ReleaseDetails(
+      date: "13 October 2014",
+      title: "The Complete Albums Collection",
+      studio: "Parlophone, BMG/INgrooves",
+      image: "box-complete-albums-collection",
+      key: "1310"
     ),
   ]
 }
