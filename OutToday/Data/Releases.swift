@@ -413,6 +413,18 @@ public struct Releases {
       title: "Empire of the Clouds",
       image: "single-2016-empire-of-the-clouds",
       key: "1604"
-    )
+    ),
+    ReleaseDetails(
+      date: "09 November 1979",
+      title: "The Soundhouse Tapes",
+      image: "ep-1979-soundhouse",
+      key: "0911"
+    ),
+    ReleaseDetails(
+      date: "25 December 1980",
+      title: "Live!! +one",
+      image: "ep-1980-live-one",
+      key: "2512"
+    ),
   ]
 }
