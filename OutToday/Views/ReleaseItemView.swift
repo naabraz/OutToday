@@ -9,8 +9,9 @@ struct ReleaseItemView: View {
       Image(image)
         .resizable()
         .frame(width: 64, height: 64)
-      Text("\(title)")
-        .font(.title3)
+        .cornerRadius(3.0)
+      Text(title)
+        .font(.body)
     }
   }
 }

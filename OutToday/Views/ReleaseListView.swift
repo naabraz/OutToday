@@ -17,7 +17,7 @@ struct ReleaseListView: View {
       }
       .foregroundColor(.primary)
       .listStyle(InsetGroupedListStyle())
-      .navigationBarTitle("Iron Maiden Releases")
+      .navigationBarTitle("Releases")
     }
     .onOpenURL { url in
       guard let releaseDetails = releases.first(where: { $0.url == url }) else { return }
