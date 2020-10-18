@@ -22,21 +22,27 @@ struct ReleaseDetailsView: View {
             .font(.title3)
           Text(details.date)
             .padding([.bottom])
-          Text("Producers:")
-            .bold()
-            .font(.title3)
-          Text(details.producers)
-            .padding([.bottom])
-          Text("Studio:")
-            .bold()
-            .font(.title3)
-          Text(details.studio)
-            .padding([.bottom])
-          Text("Recorded:")
-            .bold()
-            .font(.title3)
-          Text(details.recorded)
-            .padding([.bottom])
+          if ((details.producers) != nil) {
+            Text("Producers:")
+              .bold()
+              .font(.title3)
+              Text(details.producers!)
+              .padding([.bottom])
+          }
+          if ((details.studio) != nil) {
+            Text("Studio:")
+              .bold()
+              .font(.title3)
+            Text(details.studio!)
+              .padding([.bottom])
+          }
+          if ((details.studio) != nil) {
+            Text("Recorded:")
+              .bold()
+              .font(.title3)
+            Text(details.recorded!)
+              .padding([.bottom])
+          }
         }
       }
       .padding([.all])

@@ -3,9 +3,9 @@ import Foundation
 public struct ReleaseDetails {
   public let date: String
   public let title: String
-  public let producers: String
-  public let studio: String
-  public let recorded: String
+  public let producers: String?
+  public let studio: String?
+  public let recorded: String?
   public let image: String
   public let key: String
   public let url: URL?
@@ -13,9 +13,9 @@ public struct ReleaseDetails {
   init(
     date: String,
     title: String,
-    producers: String,
-    studio: String,
-    recorded: String,
+    producers: String? = nil,
+    studio: String? = nil,
+    recorded: String? = nil,
     image: String,
     key: String
   ) {
