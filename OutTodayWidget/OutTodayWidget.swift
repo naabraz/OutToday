@@ -1,7 +1,6 @@
 import WidgetKit
 import SwiftUI
 
-@available(iOSApplicationExtension 14.0, *)
 struct OutTodayWidgetProvider: TimelineProvider {
   func placeholder(in context: Context) -> OutTodayWidgetEntry {
     OutTodayWidgetEntry(date: Date(), release: ReleaseProvider.getRandomRelease())
@@ -33,7 +32,6 @@ struct OutTodayWidgetEntry: TimelineEntry {
   let release: RandomReleaseofTheDay
 }
 
-@available(iOSApplicationExtension 14.0, *)
 struct OutTodayWidgetEntryView : View {
   var entry: OutTodayWidgetProvider.Entry
   
@@ -46,7 +44,6 @@ struct OutTodayWidgetEntryView : View {
   }
 }
 
-@available(iOSApplicationExtension 14.0, *)
 @main
 struct OutTodayWidget: Widget {
   let kind: String = "OutTodayWidget"
@@ -61,7 +58,6 @@ struct OutTodayWidget: Widget {
   }
 }
 
-@available(iOSApplicationExtension 14.0, *)
 struct OutTodayWidget_Previews: PreviewProvider {
   static var previews: some View {
     OutTodayWidgetEntryView(

@@ -19,7 +19,6 @@ struct NumberOfReleases: View {
   }
 }
 
-@available(iOSApplicationExtension 14.0, *)
 struct OutTodaySmallWidgetView: View {
   let randomRelease: RandomReleaseofTheDay
   

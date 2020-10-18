@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct ReleasesView: View {
-  
   var body: some View {
     ReleaseListView()
   }
