@@ -540,5 +540,54 @@ public struct Releases {
       image: "livealbum-bookofsouls",
       key: "1711"
     ),
+    ReleaseDetails(
+      date: "23 September 1996",
+      title: "Best of the Beast",
+      producers: "Martin Birch, Nigel Green, Steve Harris, Iron Maiden, Will Malone",
+      studio: "EMI",
+      image: "comp-best-of-the-beast",
+      key: "2309"
+    ),
+    ReleaseDetails(
+      date: "17 May 1999",
+      title: "Ed Hunter",
+      studio: "EMI",
+      image: "comp-ed-hunter",
+      key: "1705"
+    ),
+    ReleaseDetails(
+      date: "4 November 2002",
+      title: "Best of the 'B' Sides",
+      image: "comp-best-of-b-sides",
+      key: "0411"
+    ),
+    ReleaseDetails(
+      date: "4 November 2002",
+      title: "Edward the Great: The Greatest Hits",
+      studio: "EMI",
+      image: "comp-edward-the-great",
+      key: "0411"
+    ),
+    ReleaseDetails(
+      date: "5 July 2005",
+      title: "The Essential Iron Maiden",
+      studio: "Sanctuary",
+      image: "comp-essential-iron-maiden",
+      key: "0506"
+    ),
+    ReleaseDetails(
+      date: "12 May 2008",
+      title: "Somewhere Back in Time The Best of: 1980 – 1989",
+      studio: "EMI",
+      image: "comp-somewhere",
+      key: "1205"
+    ),
+    ReleaseDetails(
+      date: "6 June 2011",
+      title: "From Fear to Eternity The Best of 1990 – 2010",
+      studio: "EMI",
+      image: "comp-from-fear-to-eternity",
+      key: "0606"
+    ),
   ]
 }
