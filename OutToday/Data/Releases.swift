@@ -426,5 +426,119 @@ public struct Releases {
       image: "ep-1980-live-one",
       key: "2512"
     ),
+    ReleaseDetails(
+      date: "14 October 1985",
+      title: "Live After Death",
+      studio: "EMI",
+      recorded: "Long Beach Arena, California, Hammersmith Odeon, London",
+      image: "livealbum-liveafterdeath",
+      key: "1410"
+    ),
+    ReleaseDetails(
+      date: "08 November 1989",
+      title: "Maiden England '88",
+      producers: "Martin Birch",
+      studio: "PMI",
+      recorded: "National Exhibition Centre, Birmingham",
+      image: "livealbum-maidenengland88",
+      key: "0811"
+    ),
+    ReleaseDetails(
+      date: "22 March 1993",
+      title: "A Real Live One",
+      producers: "Steve Harris",
+      studio: "EMI",
+      recorded: "Various concerts throughout the Fear of the Dark Tour and Real Live Tour",
+      image: "livealbum-a-real-live-one",
+      key: "2203"
+    ),
+    ReleaseDetails(
+      date: "18 October 1993",
+      title: "A Real Dead One",
+      producers: "Steve Harris",
+      studio: "EMI",
+      recorded: "Various concerts throughout the Fear of the Dark Tour and Real Live Tour",
+      image: "livealbum-a-real-dead-one",
+      key: "1810"
+    ),
+    ReleaseDetails(
+      date: "08 November 1993",
+      title: "Live At Donington '92",
+      producers: "Steve Harris",
+      studio: "EMI",
+      recorded: "Monsters of Rock Festival, Donington Park",
+      image: "livealbum-liveatdonington",
+      key: "0811"
+    ),
+    ReleaseDetails(
+      date: "22 September 1998",
+      title: "A Real Live Dead One",
+      studio: "EMI",
+      recorded: "Various concerts throughout the Fear of the Dark Tour and Real Live Tour",
+      image: "livealbum-areallivedeadone",
+      key: "2209"
+    ),
+    ReleaseDetails(
+      date: "25 March 2002",
+      title: "Rock in Rio",
+      producers: "Kevin Shirley",
+      studio: "EMI, Sony (US), Portrait Records (US), Sanctuary (video)",
+      recorded: "Rock in Rio Festival, Rio de Janeiro, Brazil",
+      image: "livealbum-rockinrio",
+      key: "2503"
+    ),
+    ReleaseDetails(
+      date: "4 November 2002",
+      title: "BBC Archives",
+      producers: "Tony Wilson",
+      recorded: "Collection of songs from three live shows and one live radio broadcast, recorded by the BBC between 1979 and 1988",
+      image: "livealbum-bbc-archives",
+      key: "0411"
+    ),
+    ReleaseDetails(
+      date: "4 November 2002",
+      title: "Beast over Hammersmith",
+      producers: "Doug Hall, Steve Harris",
+      studio: "EMI",
+      recorded: "Hammersmith Odeon, London",
+      image: "livealbum-beast-over-hammersmith",
+      key: "0411"
+    ),
+    ReleaseDetails(
+      date: "29 August 2005",
+      title: "Death On The Road",
+      producers: "Kevin Shirley, Steve Harris",
+      studio: "EMI",
+      recorded: "Westfalenhalle Arena, Dortmund, Germany",
+      image: "livealbum-deathontheroad",
+      key: "2908"
+    ),
+    ReleaseDetails(
+      date: "22 May 2009",
+      title: "Flight 666",
+      producers: "Kevin Shirley",
+      studio: "EMI, UMe (United States)",
+      recorded: "Various concerts throughout the first leg of the Somewhere Back in Time World Tour",
+      image: "livealbum-flight666",
+      key: "2205"
+    ),
+    ReleaseDetails(
+      date: "23 March 2012",
+      title: "En Vivo",
+      producers: "Kevin Shirley",
+      studio: "EMI, UME (US)",
+      recorded: "Estadio Nacional Santiago, Chile",
+      image: "livealbum-envivo",
+      key: "2303"
+    ),
+    ReleaseDetails(
+      date: "17 November 2017",
+      title: "The Book Of Souls: Live Chapter",
+      producers: "Tony Newton, Steve Harris",
+      studio: "Parlophone, BMG",
+      recorded: "Various concerts throughout both legs of the Book Of Souls World Tour",
+      image: "livealbum-bookofsouls",
+      key: "1711"
+    ),
   ]
 }
