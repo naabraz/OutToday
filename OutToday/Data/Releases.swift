@@ -344,7 +344,7 @@ public struct Releases {
     ),
     ReleaseDetails(
       date: "25 March 2002",
-      title: "Run To The Hills",
+      title: "Run To The Hills Remaster",
       image: "single-2002-run-to-the-hills",
       key: "2503"
     ),
@@ -374,7 +374,7 @@ public struct Releases {
     ),
     ReleaseDetails(
       date: "15 August 2005",
-      title: "The Trooper",
+      title: "The Trooper Remaster",
       image: "single-2005-the-trooper",
       key: "1508"
     ),
@@ -632,13 +632,6 @@ public struct Releases {
       key: "0509"
     ),
     ReleaseDetails(
-      date: "05 September 1994",
-      title: "Raising Hell",
-      studio: "PMI",
-      image: "video-raising-hell",
-      key: "0509"
-    ),
-    ReleaseDetails(
       date: "26 November 2001",
       title: "Classic Albums: Iron Maiden – The Number of the Beast",
       studio: "Isis Productions/Eagle Vision",
@@ -679,19 +672,11 @@ public struct Releases {
     ),
     ReleaseDetails(
       date: "04 February 2008",
-      title: "Live After Death",
+      title: "Live After Death Video",
       studio: "EMI",
       recorded: "Long Beach Arena, California, Hammersmith Odeon, London",
       image: "video-live-after-death",
       key: "0402"
-    ),
-    ReleaseDetails(
-      date: "22 May 2009",
-      title: "Flight 666",
-      studio: "EMI, UMe (United States)",
-      recorded: "Various concerts throughout the first leg of the Somewhere Back in Time World Tour",
-      image: "video-flight-666",
-      key: "2205"
     ),
     ReleaseDetails(
       date: "23 March 2012",
