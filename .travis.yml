@@ -1,11 +1,14 @@
 stages:
-  - name: deploy
-    if: tag IS present
   jobs:
     include:
     - stage: deploy
+      if: tag IS present
+      branches:
+        only:
+        - master
       language: objective-c
       os: osx
+      osx_image: xcode12.2
       install:
         - bundle
       script:
