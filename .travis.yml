@@ -7,9 +7,10 @@ stages:
         only:
         - master
       language: objective-c
+      xcode_project: OutToday.xcodeproj
+      xcode_scheme: OutToday
+      xcode_destination: platform=iOS Simulator,OS=14.0,name=iPhone X
       os: osx
       osx_image: xcode12.2
-      install:
-        - bundle
       script:
         - fastlane beta
