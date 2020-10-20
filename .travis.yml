@@ -12,5 +12,7 @@ stages:
       xcode_project: OutToday.xcodeproj
       xcode_scheme: OutToday
       xcode_destination: platform=iOS Simulator,OS=14.0,name=iPhone X
+      before_install:
+        - bundle
       script:
         - fastlane beta
