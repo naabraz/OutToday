@@ -1,6 +1,6 @@
 osx_image: xcode12
 language: objective-c
-script: xctool -workspace OutToday.xcworkspace -scheme OutToday
+script: xcodebuild -workspace OutToday.xcworkspace -scheme OutToday -allowProvisioningUpdates
 
 stages:
   jobs:
@@ -13,9 +13,5 @@ stages:
       xcode_project: OutToday.xcodeproj
       xcode_scheme: OutToday
       xcode_destination: platform=iOS Simulator,OS=14.0,name=iPhone X
-      before_install:
-        - brew install applesimutils
-        - gem install rake
-        - brew install xctool
       script:
         - fastlane beta
