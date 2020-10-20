@@ -1,0 +1,12 @@
+stages:
+  - name: deploy
+    if: tag IS present
+  jobs:
+    include:
+    - stage: deploy
+      language: objective-c
+      os: osx
+      install:
+        - bundle
+      script:
+        - fastlane beta
