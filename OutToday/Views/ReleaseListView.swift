@@ -1,7 +1,14 @@
 import SwiftUI
 
-struct ReleaseListView: View {
+func orderReleases() -> [ReleaseDetails] {
   let releases = Releases.allReleases
+  
+  return releases.sorted(by: { $0.title < $1.title })
+}
+
+struct ReleaseListView: View {
+  let releases = orderReleases()
+
   @State private var visibleReleaseDetails: ReleaseDetails?
   
   var body: some View {
