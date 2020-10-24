@@ -2,16 +2,23 @@ import Foundation
 
 public struct DateHelper {
   static func getClosestDate() -> String {
+//    let allReleases = Releases.allReleases
+    
     let date = Date()
     let formatter = DateFormatter()
-    formatter.dateFormat = "yyyy/MM/dd"
+    formatter.dateFormat = "dd/MM/yyyy"
     
     let calendar = Calendar.current
     let year = String(calendar.component(.year, from: date))
     
-    let date1 = formatter.date(from: year+"/12/13")
-    let date2 = formatter.date(from: year+"/01/08")
-    let date3 = formatter.date(from: year+"/03/15")
+    let date1 = formatter.date(from: "14/03/"+year)
+    let date2 = formatter.date(from: "15/11/"+year)
+    let date3 = formatter.date(from: "16/12/"+year)
+    
+    let s = "0409"
+    let r = String(s.enumerated().map { $0 > 0 && $0 % 2 == 0 ? ["/", $1] : [$1]}.joined())
+    
+    print("closestDate" + r)
     
     let dateList = [date1!, date2!, date3!]
     
