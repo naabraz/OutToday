@@ -15,7 +15,7 @@ public struct ReleaseProvider {
     return releaseDates
   }
   
-  static func getNearestReleaseDate(releaseDates: [Date]) -> String {
+  static func getNearestReleaseDate(releaseDates: [Date]) -> String? {
     if let closestDate = releaseDates.sorted().first(where: {$0.timeIntervalSinceNow > 0}) {
       let closest = String(closestDate.description).prefix(10)
       let dateArray = closest.split{$0 == "-"}.map(String.init)
@@ -24,26 +24,34 @@ public struct ReleaseProvider {
       return key
     }
     
-    return "No nearest date"
+    return nil
   }
   
   static func getNearestReleases() -> [ReleaseDetails] {
     let releases = Releases.allReleases
     var nearestReleases = [] as [ReleaseDetails]
+    var releaseDates = [] as [Date]
+    var nearestReleaseDate: String?
 
     let date = Date()
     let calendar = Calendar.current
     let year = String(calendar.component(.year, from: date))
     
-    let releaseDates = getReleaseDates(releases: releases, year: year)
-    let nearestReleaseDate = getNearestReleaseDate(releaseDates: releaseDates)
+    releaseDates = getReleaseDates(releases: releases, year: year)
+    nearestReleaseDate = getNearestReleaseDate(releaseDates: releaseDates)
     
-    releases.forEach { release in
-      if (release.key == nearestReleaseDate) {
-        nearestReleases.append(release)
+    if (nearestReleaseDate == nil) {
+      let year = String(calendar.component(.year, from: date)+1)
+      releaseDates = getReleaseDates(releases: releases, year: year)
+      nearestReleaseDate = getNearestReleaseDate(releaseDates: releaseDates)
+    } else {
+      releases.forEach { release in
+        if (release.key == nearestReleaseDate) {
+          nearestReleases.append(release)
+        }
       }
     }
-        
+
     return nearestReleases
   }
 
