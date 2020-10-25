@@ -28,7 +28,7 @@ public struct ReleaseProvider {
   }
   
   static func getNearestReleases() -> [ReleaseDetails] {
-    let releases = Releases.allReleases
+    let releases = Releases.releaseMock
     var nearestReleases = [] as [ReleaseDetails]
     var releaseDates = [] as [Date]
     var nearestReleaseDate: String?
@@ -42,11 +42,14 @@ public struct ReleaseProvider {
     
     if (nearestReleaseDate == nil) {
       let year = String(calendar.component(.year, from: date)+1)
+      
       releaseDates = getReleaseDates(releases: releases, year: year)
       nearestReleaseDate = getNearestReleaseDate(releaseDates: releaseDates)
-    } else {
+    }
+    
+    if (nearestReleaseDate != nil) {
       releases.forEach { release in
-        if (release.key == nearestReleaseDate) {
+        if (release.key == nearestReleaseDate!) {
           nearestReleases.append(release)
         }
       }

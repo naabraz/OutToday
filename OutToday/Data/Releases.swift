@@ -697,4 +697,34 @@ public struct Releases {
       key: "2503"
     ),
   ]
+  
+  static let releaseMock = [
+    ReleaseDetails(
+      date: "20 November 1980",
+      title: "The Book of Souls",
+      producers: "Kevin Shirley, Steve Harris",
+      studio: "Parlophone, Sanctuary Copyrights/BMG (US)",
+      recorded: "Guillaume Tell Studios",
+      image: "album-the-book-of-souls",
+      key: "2010"
+    ),
+    ReleaseDetails(
+      date: "01 December 1980",
+      title: "The Book of Souls",
+      producers: "Kevin Shirley, Steve Harris",
+      studio: "Parlophone, Sanctuary Copyrights/BMG (US)",
+      recorded: "Guillaume Tell Studios",
+      image: "album-the-book-of-souls",
+      key: "0102"
+    ),
+    ReleaseDetails(
+      date: "01 January 1980",
+      title: "The Book of Souls",
+      producers: "Kevin Shirley, Steve Harris",
+      studio: "Parlophone, Sanctuary Copyrights/BMG (US)",
+      recorded: "Guillaume Tell Studios",
+      image: "album-the-book-of-souls",
+      key: "0110"
+    )
+  ]
 }
