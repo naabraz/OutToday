@@ -28,7 +28,7 @@ public struct ReleaseProvider {
   }
   
   static func getNearestReleases() -> [ReleaseDetails] {
-    let releases = Releases.releaseMock
+    let releases = Releases.allReleases
     var nearestReleases = [] as [ReleaseDetails]
     var releaseDates = [] as [Date]
     var nearestReleaseDate: String?
