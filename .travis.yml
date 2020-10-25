@@ -1,17 +1,13 @@
 osx_image: xcode12
 language: objective-c
+notifications:
+  email: false
+branches:
+  only:
+    - main
 script: xcodebuild -workspace OutToday.xcworkspace -scheme OutToday -allowProvisioningUpdates
-
-stages:
-  jobs:
-    include:
-    - stage: deploy
-      if: tag IS present
-      branches:
-        only:
-        - master
-      xcode_project: OutToday.xcodeproj
-      xcode_scheme: OutToday
-      xcode_destination: platform=iOS Simulator,OS=14.0,name=iPhone X
-      script:
-        - fastlane beta
+xcode_project: OutToday.xcodeproj
+xcode_scheme: OutToday
+xcode_destination: platform=iOS SimulatOS=14.0,name=iPhone X
+script:
+  - fastlane beta
