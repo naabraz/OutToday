@@ -1,9 +1,10 @@
 import Foundation
 
 public struct ReleaseProvider {
-  static func getClosestDate() -> Void {
+  static func getNearestReleases() -> [ReleaseDetails] {
     let releases = Releases.allReleases
     var releaseDates = [] as [Date]
+    var nearestReleases = [] as [ReleaseDetails]
     
     let formatter = DateFormatter()
     formatter.dateFormat = "dd/MM/yyyy"
@@ -23,8 +24,14 @@ public struct ReleaseProvider {
       let dateArray = closest.split{$0 == "-"}.map(String.init)
       let key = dateArray[2]+dateArray[1]
 
-      print("closestDate ", key)
+      releases.forEach { release in
+        if (release.key == key) {
+          nearestReleases.append(release)
+        }
+      }
     }
+        
+    return nearestReleases
   }
 
   static func getRandomRelease() -> RandomReleaseofTheDay {
@@ -32,7 +39,7 @@ public struct ReleaseProvider {
     let releases = Releases.allReleases
     var releasesOfTheDay = [ReleaseDetails]()
     
-    getClosestDate()
+    print("nearestReleases ", getNearestReleases())
     
     releases.forEach { release in
       if(release.key == date) {
