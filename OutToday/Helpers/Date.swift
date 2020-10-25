@@ -1,12 +1,8 @@
 import Foundation
 
 public struct DateHelper {
-  static func getClosestDate() -> String {
+  static func getClosestDate() -> Void {
     let releases = Releases.allReleases
-    
-    let formatter = DateFormatter()
-    formatter.dateFormat = "dd/MM/yyyy"
-    
     var releaseDates:[Date] = []
     
     let date = Date()
@@ -14,19 +10,24 @@ public struct DateHelper {
     let year = String(calendar.component(.year, from: date))
     
     releases.forEach { release in
-      let r = String(release.key.enumerated().map { $0 > 0 && $0 % 2 == 0 ? ["/", $1] : [$1]}.joined())
+      let formatter = DateFormatter()
+      formatter.dateFormat = "dd/MM/yyyy"
       
-      releaseDates.append(formatter.date(from: r+"/"+year)!)
+      let releaseDateKey = String(release.key.enumerated().map { $0 > 0 && $0 % 2 == 0 ? ["/", $1] : [$1]}.joined())
+      
+      releaseDates.append(formatter.date(from: releaseDateKey+"/"+year)!)
     }
-    
+        
     if let closestDate = releaseDates.sorted().first(where: {$0.timeIntervalSinceNow > 0}) {
-      return String(closestDate.description(with: .current))
+      let closest = String(closestDate.description(with: .current))
+
+      print("closestDate ", closest)
     }
-    
-    return "No closest date"
   }
     
   static func formatDate() -> String {
+    getClosestDate()
+
     let date = Date()
     let dateFormatter = DateFormatter()
     
@@ -34,8 +35,6 @@ public struct DateHelper {
     dateFormatter.setLocalizedDateFormatFromTemplate("dd-MM")
     
     let formattedDate = dateFormatter.string(from: date).replacingOccurrences(of: "/", with: "")
-    
-    print("closestDate ", getClosestDate())
     
     return formattedDate
   }
