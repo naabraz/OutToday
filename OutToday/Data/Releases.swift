@@ -632,13 +632,6 @@ public struct Releases {
       key: "0509"
     ),
     ReleaseDetails(
-      date: "26 November 2001",
-      title: "Classic Albums: Iron Maiden – The Number of the Beast",
-      studio: "Isis Productions/Eagle Vision",
-      image: "video-the-number",
-      key: "2611"
-    ),
-    ReleaseDetails(
       date: "16 July 2002",
       title: "Rock in Rio - video",
       producers: "Kevin Shirley",
