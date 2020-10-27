@@ -7,7 +7,7 @@ public struct Releases {
       studio: "Parlophone, Sanctuary Copyrights/BMG (US)",
       recorded: "Guillaume Tell Studios",
       image: "album-the-book-of-souls",
-      key: "0409"
+      key: "2610"
     ),
     ReleaseDetails(
       date: "16 August 2010",

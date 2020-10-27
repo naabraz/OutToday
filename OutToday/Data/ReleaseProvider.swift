@@ -58,6 +58,28 @@ public struct ReleaseProvider {
     return nearestReleases
   }
 
+  static func getRandomNextRelease() -> RandomReleaseofTheDay {
+    let nearestReleases: [ReleaseDetails] = getNearestReleases()
+    
+    if (nearestReleases.count == 0) {
+      let randomRelease = RandomReleaseofTheDay(
+        numberOfReleases: 0
+      )
+      
+      return randomRelease
+    }
+    
+    let randomIndex = Int.random(in: 0..<nearestReleases.count)
+    let numberOfReleases = nearestReleases.count
+    
+    let randomRelease = RandomReleaseofTheDay(
+      release: nearestReleases[randomIndex],
+      numberOfReleases: numberOfReleases
+    )
+    
+    return randomRelease
+  }
+  
   static func getRandomRelease() -> RandomReleaseofTheDay {
     let date = DateHelper.formatDate()
     let releases = Releases.allReleases
