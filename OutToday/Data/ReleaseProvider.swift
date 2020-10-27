@@ -62,9 +62,7 @@ public struct ReleaseProvider {
     let date = DateHelper.formatDate()
     let releases = Releases.allReleases
     var releasesOfTheDay = [ReleaseDetails]()
-    
-    print("nearestReleases ", getNearestReleases())
-    
+        
     releases.forEach { release in
       if(release.key == date) {
         releasesOfTheDay.append(release)

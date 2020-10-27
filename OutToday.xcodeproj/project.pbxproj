@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C2D0F5125478FA300110ECF /* OutTodayMediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2D0F5025478FA300110ECF /* OutTodayMediumWidgetView.swift */; };
 		9C5A3A2D25351D67005F40A6 /* OutTodaySmallWidgetEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5A3A2C25351D67005F40A6 /* OutTodaySmallWidgetEmptyView.swift */; };
 		9C9A3C302533A3DA007D688F /* OutTodayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A3C2F2533A3D9007D688F /* OutTodayApp.swift */; };
 		9C9A3C322533A3DA007D688F /* ReleasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A3C312533A3DA007D688F /* ReleasesView.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9C2D0F5025478FA300110ECF /* OutTodayMediumWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutTodayMediumWidgetView.swift; sourceTree = "<group>"; };
 		9C5A3A2C25351D67005F40A6 /* OutTodaySmallWidgetEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutTodaySmallWidgetEmptyView.swift; sourceTree = "<group>"; };
 		9C9A3C2C2533A3D9007D688F /* OutToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C9A3C2F2533A3D9007D688F /* OutTodayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutTodayApp.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			children = (
 				9CC014092533E6C3005DEFDD /* OutTodaySmallWidgetView.swift */,
 				9C5A3A2C25351D67005F40A6 /* OutTodaySmallWidgetEmptyView.swift */,
+				9C2D0F5025478FA300110ECF /* OutTodayMediumWidgetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				9C5A3A2D25351D67005F40A6 /* OutTodaySmallWidgetEmptyView.swift in Sources */,
 				9C9A3C832533E32A007D688F /* Releases.swift in Sources */,
 				9CE11BA9253BA9E700A11EBB /* RandomReleaseofTheDay.swift in Sources */,
+				9C2D0F5125478FA300110ECF /* OutTodayMediumWidgetView.swift in Sources */,
 				9C9A3C7E2533E232007D688F /* ReleaseDetails.swift in Sources */,
 				9CC0140A2533E6C3005DEFDD /* OutTodaySmallWidgetView.swift in Sources */,
 				9C9A3C6E2533E055007D688F /* OutTodayWidget.swift in Sources */,
