@@ -1,7 +1,6 @@
 import Foundation
 
 public struct DateHelper {
-
   static func formatDate() -> String {
     let date = Date()
     let dateFormatter = DateFormatter()

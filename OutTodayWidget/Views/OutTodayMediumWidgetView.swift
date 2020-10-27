@@ -24,20 +24,25 @@ struct OutTodayMediumWidgetView: View {
   
   var body: some View {
     HStack {
-      if randomRelease.numberOfReleases > 0 {
-        Image(randomRelease.release.image)
-          .resizable()
-          .overlay(NumberOfReleasesMediumWidget(numberOfReleases: randomRelease.numberOfReleases), alignment: .bottomTrailing)
-          .widgetURL(randomRelease.release.url)
-      } else {
-        OutTodaySmallWidgetEmptyView()
+      VStack {
+        if randomRelease.numberOfReleases > 0 {
+          Image(randomRelease.release.image)
+            .resizable()
+            .overlay(NumberOfReleasesMediumWidget(numberOfReleases: randomRelease.numberOfReleases), alignment: .bottomTrailing)
+        } else {
+          OutTodaySmallWidgetEmptyView()
+        }
       }
-
-      Image(nextRelease.release.image)
-        .resizable()
-        .overlay(NumberOfReleasesMediumWidget(numberOfReleases: nextRelease.numberOfReleases), alignment: .bottomTrailing)
-        .widgetURL(nextRelease.release.url)
+      .widgetURL(randomRelease.release.url)
+      
+      VStack {
+        Image(nextRelease.release.image)
+          .resizable()
+          .overlay(NumberOfReleasesMediumWidget(numberOfReleases: nextRelease.numberOfReleases), alignment: .bottomTrailing)
+      }
+      .widgetURL(nextRelease.release.url)
     }
+    .background(Color.black)
   }
 }
 
@@ -55,7 +60,7 @@ struct OutTodayMediumWidgetView_Previews: PreviewProvider {
       ),
       numberOfReleases: 1
     )
-
+    
     let nextRelease = RandomReleaseofTheDay(
       release: ReleaseDetails(
         date: "20 November 1980",
@@ -68,7 +73,7 @@ struct OutTodayMediumWidgetView_Previews: PreviewProvider {
       ),
       numberOfReleases: 1
     )
-
+    
     OutTodayMediumWidgetView(
       randomRelease: randomRelease,
       nextRelease: nextRelease

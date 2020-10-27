@@ -2,7 +2,6 @@ import SwiftUI
 import WidgetKit
 
 struct OutTodaySmallWidgetEmptyView: View {
-
   var body: some View {
     ZStack {
       Color.black

@@ -32,7 +32,7 @@ public struct ReleaseProvider {
     var nearestReleases = [] as [ReleaseDetails]
     var releaseDates = [] as [Date]
     var nearestReleaseDate: String?
-
+    
     let date = Date()
     let calendar = Calendar.current
     let year = String(calendar.component(.year, from: date))
@@ -54,10 +54,10 @@ public struct ReleaseProvider {
         }
       }
     }
-
+    
     return nearestReleases
   }
-
+  
   static func getRandomNextRelease() -> RandomReleaseofTheDay {
     let nearestReleases: [ReleaseDetails] = getNearestReleases()
     
@@ -84,7 +84,7 @@ public struct ReleaseProvider {
     let date = DateHelper.formatDate()
     let releases = Releases.allReleases
     var releasesOfTheDay = [ReleaseDetails]()
-        
+    
     releases.forEach { release in
       if(release.key == date) {
         releasesOfTheDay.append(release)
@@ -106,7 +106,7 @@ public struct ReleaseProvider {
       release: releasesOfTheDay[randomIndex],
       numberOfReleases: numberOfReleases
     )
-
+    
     return randomRelease
   }
 }
