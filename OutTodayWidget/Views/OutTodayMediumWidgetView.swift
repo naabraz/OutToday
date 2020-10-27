@@ -24,12 +24,19 @@ struct OutTodayMediumWidgetView: View {
   
   var body: some View {
     HStack {
-      Image(randomRelease.release.image)
+      if randomRelease.numberOfReleases > 0 {
+        Image(randomRelease.release.image)
+          .resizable()
+          .overlay(NumberOfReleasesMediumWidget(numberOfReleases: randomRelease.numberOfReleases), alignment: .bottomTrailing)
+          .widgetURL(randomRelease.release.url)
+      } else {
+        OutTodaySmallWidgetEmptyView()
+      }
+
+      Image(nextRelease.release.image)
         .resizable()
-        .overlay(NumberOfReleasesMediumWidget(numberOfReleases: randomRelease.numberOfReleases), alignment: .bottomTrailing)
-      Image(randomRelease.release.image)
-        .resizable()
-        .overlay(NumberOfReleasesMediumWidget(numberOfReleases: randomRelease.numberOfReleases), alignment: .bottomTrailing)
+        .overlay(NumberOfReleasesMediumWidget(numberOfReleases: nextRelease.numberOfReleases), alignment: .bottomTrailing)
+        .widgetURL(nextRelease.release.url)
     }
   }
 }
