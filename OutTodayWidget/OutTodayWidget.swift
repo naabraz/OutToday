@@ -34,13 +34,13 @@ struct OutTodayWidgetEntry: TimelineEntry {
 
 struct OutTodayWidgetEntryView : View {
   var entry: OutTodayWidgetProvider.Entry
+  let release = ReleaseProvider.getRandomRelease()
+  let randomNextRelease = ReleaseProvider.getRandomNextRelease()
   
   var body: some View {
-    if entry.release.numberOfReleases > 0 {
-      OutTodaySmallWidgetView(randomRelease: entry.release)
-    } else {
-      OutTodaySmallWidgetEmptyView()
-    }
+    OutTodayWidgetView(
+      randomRelease: release,
+      randomNextRelease: randomNextRelease)
   }
 }
 
@@ -48,13 +48,16 @@ struct OutTodayWidgetEntryView : View {
 struct OutTodayWidget: Widget {
   let kind: String = "OutTodayWidget"
   
-  var body: some WidgetConfiguration {
-    StaticConfiguration(kind: kind, provider: OutTodayWidgetProvider()) { entry in
+  public var body: some WidgetConfiguration {
+    StaticConfiguration(
+      kind: kind,
+      provider: OutTodayWidgetProvider()
+    ) { entry in
       OutTodayWidgetEntryView(entry: entry)
     }
     .configurationDisplayName("Out Today")
     .description("Displays an Iron Maiden release on this day.")
-    .supportedFamilies([.systemSmall])
+    .supportedFamilies([.systemSmall, .systemMedium])
   }
 }
 

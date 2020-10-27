@@ -11,7 +11,6 @@ struct NumberOfReleases: View {
           .bold()
           .padding(6)
           .foregroundColor(.white)
-          .background(Color.black)
           .cornerRadius(8)
           .padding(8)
       }
