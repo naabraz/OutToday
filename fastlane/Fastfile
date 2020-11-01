@@ -19,10 +19,16 @@ default_platform(:ios)
 platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
-    get_certificates
-    get_provisioning_profile
     increment_build_number(xcodeproj: "OutToday.xcodeproj")
-    build_app(scheme: "OutToday")
+    build_app(
+      scheme: "OutToday",
+      export_options: {
+        provisioningProfiles: {
+          "com.nataliabraz.OutToday" => "OutToday",
+          "com.nataliabraz.OutToday.OutTodayWidget" => "OutTodayWidget"
+        }
+      }
+    )
     upload_to_testflight
   end
 end
