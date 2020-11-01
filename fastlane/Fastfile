@@ -19,7 +19,7 @@ default_platform(:ios)
 platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
-    match(type: "appstore", git_private_key: "a040a6bd395790f8a898e5a5e85408334e73a23a")
+    match(type: "appstore")
     increment_build_number(xcodeproj: "OutToday.xcodeproj")
     build_app(scheme: "OutToday")
     upload_to_testflight
