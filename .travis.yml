@@ -5,9 +5,11 @@ notifications:
 branches:
   only:
     - main
+before_script:
+  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 script: xcodebuild -workspace OutToday.xcworkspace -scheme OutToday -allowProvisioningUpdates
 xcode_project: OutToday.xcodeproj
 xcode_scheme: OutToday
 xcode_destination: platform=iOS SimulatOS=14.0,name=iPhone X
 script:
-  - fastlane beta
+  - fastlane beta --verbose
