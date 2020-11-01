@@ -1,23 +1,6 @@
 import WidgetKit
 import SwiftUI
 
-struct NumberOfReleasesMediumWidget: View {
-  let numberOfReleases: Int
-  
-  var body: some View {
-    ZStack {
-      if numberOfReleases > 1 {
-        Text(String(numberOfReleases))
-          .font(.caption)
-          .bold()
-          .padding(6)
-          .foregroundColor(.white)
-          .padding(8)
-      }
-    }
-  }
-}
-
 struct OutTodayMediumWidgetView: View {
   let randomRelease: RandomReleaseofTheDay
   let nextRelease: RandomReleaseofTheDay
@@ -28,7 +11,7 @@ struct OutTodayMediumWidgetView: View {
         if randomRelease.numberOfReleases > 0 {
           Image(randomRelease.release.image)
             .resizable()
-            .overlay(NumberOfReleasesMediumWidget(numberOfReleases: randomRelease.numberOfReleases), alignment: .bottomTrailing)
+            .overlay(NumberOfReleases(numberOfReleases: randomRelease.numberOfReleases), alignment: .bottomTrailing)
         } else {
           OutTodaySmallWidgetEmptyView()
         }
@@ -38,7 +21,7 @@ struct OutTodayMediumWidgetView: View {
       VStack {
         Image(nextRelease.release.image)
           .resizable()
-          .overlay(NumberOfReleasesMediumWidget(numberOfReleases: nextRelease.numberOfReleases), alignment: .bottomTrailing)
+          .overlay(NumberOfReleases(numberOfReleases: nextRelease.numberOfReleases), alignment: .bottomTrailing)
       }
       .widgetURL(nextRelease.release.url)
     }
@@ -68,7 +51,7 @@ struct OutTodayMediumWidgetView_Previews: PreviewProvider {
         producers: "Kevin Shirley, Steve Harris",
         studio: "Parlophone, Sanctuary Copyrights/BMG (US)",
         recorded: "Guillaume Tell Studios",
-        image: "album-the-book-of-souls",
+        image: "livealbum-beast-over-hammersmith",
         key: "2010"
       ),
       numberOfReleases: 1

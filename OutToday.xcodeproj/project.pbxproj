@@ -10,6 +10,7 @@
 		9C2B1AB82547A39300641051 /* OutTodayWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B1AB72547A39300641051 /* OutTodayWidgetView.swift */; };
 		9C2D0F5125478FA300110ECF /* OutTodayMediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2D0F5025478FA300110ECF /* OutTodayMediumWidgetView.swift */; };
 		9C5A3A2D25351D67005F40A6 /* OutTodaySmallWidgetEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5A3A2C25351D67005F40A6 /* OutTodaySmallWidgetEmptyView.swift */; };
+		9C7476EE254F12AA00C7CFB4 /* NumberOfReleasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7476ED254F12AA00C7CFB4 /* NumberOfReleasesView.swift */; };
 		9C9A3C302533A3DA007D688F /* OutTodayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A3C2F2533A3D9007D688F /* OutTodayApp.swift */; };
 		9C9A3C322533A3DA007D688F /* ReleasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A3C312533A3DA007D688F /* ReleasesView.swift */; };
 		9C9A3C342533A3DC007D688F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C9A3C332533A3DC007D688F /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		9C2B1AB72547A39300641051 /* OutTodayWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutTodayWidgetView.swift; sourceTree = "<group>"; };
 		9C2D0F5025478FA300110ECF /* OutTodayMediumWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutTodayMediumWidgetView.swift; sourceTree = "<group>"; };
 		9C5A3A2C25351D67005F40A6 /* OutTodaySmallWidgetEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutTodaySmallWidgetEmptyView.swift; sourceTree = "<group>"; };
+		9C7476ED254F12AA00C7CFB4 /* NumberOfReleasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfReleasesView.swift; sourceTree = "<group>"; };
 		9C9A3C2C2533A3D9007D688F /* OutToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C9A3C2F2533A3D9007D688F /* OutTodayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutTodayApp.swift; sourceTree = "<group>"; };
 		9C9A3C312533A3DA007D688F /* ReleasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleasesView.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				9C5A3A2C25351D67005F40A6 /* OutTodaySmallWidgetEmptyView.swift */,
 				9C2D0F5025478FA300110ECF /* OutTodayMediumWidgetView.swift */,
 				9C2B1AB72547A39300641051 /* OutTodayWidgetView.swift */,
+				9C7476ED254F12AA00C7CFB4 /* NumberOfReleasesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			files = (
 				9C9A3C7B2533E226007D688F /* ReleaseProvider.swift in Sources */,
 				9C9A3C862533E32F007D688F /* Date.swift in Sources */,
+				9C7476EE254F12AA00C7CFB4 /* NumberOfReleasesView.swift in Sources */,
 				9C5A3A2D25351D67005F40A6 /* OutTodaySmallWidgetEmptyView.swift in Sources */,
 				9C9A3C832533E32A007D688F /* Releases.swift in Sources */,
 				9CE11BA9253BA9E700A11EBB /* RandomReleaseofTheDay.swift in Sources */,
