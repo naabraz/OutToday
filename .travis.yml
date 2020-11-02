@@ -5,11 +5,14 @@ notifications:
 branches:
   only:
     - main
-before_script:
-  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-script: xcodebuild -workspace OutToday.xcworkspace -scheme OutToday -allowProvisioningUpdates
+addons:
+  ssh_known_hosts: github.com
+before_install:
+  - make install-aws-cli
+  - make config-aws-s3
 xcode_project: OutToday.xcodeproj
 xcode_scheme: OutToday
 xcode_destination: platform=iOS SimulatOS=14.0,name=iPhone X
 script:
+  - xcodebuild -workspace OutToday.xcworkspace -scheme OutToday -allowProvisioningUpdates
   - fastlane beta --verbose

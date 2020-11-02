@@ -1,6 +1,6 @@
-git_url("git@github.com:naabraz/ios-certificates.git")
+s3_bucket("nbrz-ios-certificates")
 
-storage_mode("git")
+storage_mode("s3")
 
 type("appstore") # The default type, can be: appstore, adhoc, enterprise or development
 
