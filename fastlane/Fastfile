@@ -26,15 +26,11 @@ platform :ios do
   end
   lane :beta do
     match(type: "appstore")
-    increment_build_number(xcodeproj: "OutToday.xcodeproj")
-    build_app(scheme: "OutToday")
-    api_key = app_store_connect_api_key(
-      key_id: "L6P5RRP72W",
-      issuer_id: "d0c341fa-80e9-41d3-a453-385f7a4842a3",
-      key_filepath: "./AuthKey_L6P5RRP72W.p8",
-      duration: 1200,
-      in_house: false,
+    increment_build_number(
+      build_number: 9
+      xcodeproj: "OutToday.xcodeproj"
     )
-    pilot(api_key: api_key)
+    build_app(scheme: "OutToday")
+    upload_to_testflight(apple_id: "1535885289")
   end
 end
