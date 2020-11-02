@@ -11,10 +11,10 @@ platform :ios do
   end
   lane :beta do
     match(type: "appstore")
-    increment_build_number(
-      build_number: 11,
-      xcodeproj: "OutToday.xcodeproj"
-    )
+    increment_build_number({
+      api_key_path: ENV["PILOT_API_KEY_PATH"],
+      build_number: latest_testflight_build_number + 1
+    })
     build_app(scheme: "OutToday")
     pilot(api_key_path: ENV["PILOT_API_KEY_PATH"])
   end
