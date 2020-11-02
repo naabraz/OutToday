@@ -20,10 +20,6 @@ platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :matchappstore do
     match(
-      app_identifier: "com.nataliabraz.OutToday",
-      type: "appstore",
-    )
-    match(
       app_identifier: "com.nataliabraz.OutToday.OutTodayWidget",
       type: "appstore",
     )
