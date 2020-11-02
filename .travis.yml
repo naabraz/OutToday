@@ -9,4 +9,5 @@ before_install:
   - make install-aws-cli
   - make config-aws-s3
 script:
+  - fastlane matchappstore --verbose
   - fastlane beta --verbose
