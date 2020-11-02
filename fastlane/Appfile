@@ -1,8 +1,5 @@
-app_identifier("com.nataliabraz.OutToday")# The bundle identifier of your app
-apple_id("naabraz@gmail.com") # Your Apple email address
+app_identifier("com.nataliabraz.OutToday")
+apple_id("naabraz@gmail.com")
 
-itc_team_id("120317350") # App Store Connect Team ID
-team_id("W7MJH52X64") # Developer Portal Team ID
-
-# For more information about the Appfile, see:
-#     https://docs.fastlane.tools/advanced/#appfile
+itc_team_id("120317350")
+team_id("W7MJH52X64")
