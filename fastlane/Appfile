@@ -1,4 +1,3 @@
-app_identifier("com.nataliabraz.OutToday")# The bundle identifier of your app
 apple_id("naabraz@gmail.com") # Your Apple email address
 
 itc_team_id("120317350") # App Store Connect Team ID
