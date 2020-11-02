@@ -8,6 +8,7 @@ branches:
 before_install:
   - make install-aws-cli
   - make config-aws-s3
+  - make get-app-store-connect-file
 script:
   - fastlane matchappstore
   - fastlane beta
