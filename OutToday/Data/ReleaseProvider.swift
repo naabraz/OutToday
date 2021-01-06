@@ -9,7 +9,9 @@ public struct ReleaseProvider {
     releases.forEach { release in
       let releaseDateKey = String(release.key.enumerated().map { $0 > 0 && $0 % 2 == 0 ? ["/", $1] : [$1]}.joined())
       
-      releaseDates.append(formatter.date(from: releaseDateKey+"/"+year)!)
+      if (formatter.date(from: releaseDateKey+"/"+year) != nil) {
+        releaseDates.append(formatter.date(from: releaseDateKey+"/"+year)!)
+      }
     }
     
     return releaseDates
