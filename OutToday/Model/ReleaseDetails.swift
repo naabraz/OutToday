@@ -1,6 +1,6 @@
 import Foundation
 
-public struct ReleaseDetails {
+public struct ReleaseDetails: Codable {
   public let date: String
   public let title: String
   public let producers: String?

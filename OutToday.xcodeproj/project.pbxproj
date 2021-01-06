@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C2B023125A52E0C00952783 /* Releases.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C2B023025A52E0C00952783 /* Releases.json */; };
+		9C2B023925A5300900952783 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B023825A5300900952783 /* DemoData.swift */; };
+		9C2B024025A5394400952783 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B023825A5300900952783 /* DemoData.swift */; };
 		9C2B1AB82547A39300641051 /* OutTodayWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B1AB72547A39300641051 /* OutTodayWidgetView.swift */; };
 		9C2D0F5125478FA300110ECF /* OutTodayMediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2D0F5025478FA300110ECF /* OutTodayMediumWidgetView.swift */; };
 		9C5A3A2D25351D67005F40A6 /* OutTodaySmallWidgetEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5A3A2C25351D67005F40A6 /* OutTodaySmallWidgetEmptyView.swift */; };
@@ -62,6 +65,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9C2B023025A52E0C00952783 /* Releases.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Releases.json; sourceTree = "<group>"; };
+		9C2B023825A5300900952783 /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
 		9C2B1AB72547A39300641051 /* OutTodayWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutTodayWidgetView.swift; sourceTree = "<group>"; };
 		9C2D0F5025478FA300110ECF /* OutTodayMediumWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutTodayMediumWidgetView.swift; sourceTree = "<group>"; };
 		9C5A3A2C25351D67005F40A6 /* OutTodaySmallWidgetEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutTodaySmallWidgetEmptyView.swift; sourceTree = "<group>"; };
@@ -157,6 +162,8 @@
 			children = (
 				9C9A3C462533AB07007D688F /* ReleaseProvider.swift */,
 				9C9A3C4A2533BA74007D688F /* Releases.swift */,
+				9C2B023025A52E0C00952783 /* Releases.json */,
+				9C2B023825A5300900952783 /* DemoData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -293,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C9A3C342533A3DC007D688F /* Assets.xcassets in Resources */,
+				9C2B023125A52E0C00952783 /* Releases.json in Resources */,
 				9CE11BB5253BABE400A11EBB /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +324,7 @@
 				9C9A3C4B2533BA74007D688F /* Releases.swift in Sources */,
 				9C9A3C512533BE2E007D688F /* Date.swift in Sources */,
 				9C9A3C5F2533DEA3007D688F /* ReleaseItemView.swift in Sources */,
+				9C2B023925A5300900952783 /* DemoData.swift in Sources */,
 				9C9A3C472533AB07007D688F /* ReleaseProvider.swift in Sources */,
 				9C9A3C322533A3DA007D688F /* ReleasesView.swift in Sources */,
 				9C9A3C552533C039007D688F /* ReleaseListView.swift in Sources */,
@@ -330,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2B024025A5394400952783 /* DemoData.swift in Sources */,
 				9C9A3C7B2533E226007D688F /* ReleaseProvider.swift in Sources */,
 				9C9A3C862533E32F007D688F /* Date.swift in Sources */,
 				9C7476EE254F12AA00C7CFB4 /* NumberOfReleasesView.swift in Sources */,
