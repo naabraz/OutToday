@@ -1,6 +1,6 @@
 public func getData () -> [ReleaseDetails] {
-  if let localData = readLocalFile(forName: "Releases") {
-    return parse(jsonData: localData)
+  if let localData = readReleasesFile() {
+    return parseReleases(jsonData: localData)
   }
   
   return []
