@@ -120,7 +120,7 @@
     },
     {
       "date": "20 June 1983",
-      "title": "The Trooper - EP/Single",
+      "title": "The Trooper - EP/Single 1983",
       "image": "single-1983-the-trooper",
       "key": "2006"
     },
@@ -129,18 +129,6 @@
       "title": "Video Pieces - Video",
       "image": "video-1983-video-pieces",
       "key": "1209"
-    },
-    {
-      "date": "12 September 1983",
-      "title": "Video Pieces - Video",
-      "image": "video-1983-video-pieces",
-      "key": "1209"
-    },
-    {
-      "date": "06 August 1984",
-      "title": "2 Minutes To Midnight - EP/Single",
-      "image": "single-1984-2-minutes-to-midnight",
-      "key": "0608"
     },
     {
       "date": "06 August 1984",
@@ -191,7 +179,7 @@
     },
     {
       "date": "02 December 1985",
-      "title": "Run To The Hills Live - EP/Single",
+      "title": "Run To The Hills Live - EP/Single 1985",
       "image": "single-1985-run-to-the-hills-live",
       "key": "0212"
     },
@@ -263,11 +251,11 @@
     },
     {
       "date": "08 November 1989",
-      "title": "Maiden England '88 - Video",
+      "title": "Maiden England '88 - Video 1989",
       "producers": "Martin Birch",
       "studio": "PMI",
       "recorded": "National Exhibition Centre, Birmingham",
-      "image": "livealbum-maidenengland88",
+      "image": "1989-video-maiden-england",
       "key": "0811"
     },
     {
@@ -517,7 +505,7 @@
     },
     {
       "date": "11 March 2002",
-      "title": "Run To The Hills Live - EP/Single",
+      "title": "Run To The Hills Live - EP/Single 2002",
       "image": "single-2002-run-to-the-hills",
       "key": "1103"
     },
@@ -611,7 +599,7 @@
     },
     {
       "date": "15 August 2005",
-      "title": "The Trooper - EP/Single",
+      "title": "The Trooper - EP/Single 2005",
       "image": "single-2005-the-trooper",
       "key": "1508"
     },
@@ -747,7 +735,7 @@
     },
     {
       "date": "25 March 2013",
-      "title": "MAIDEN ENGLAND '88 - Live Album",
+      "title": "Maiden England '88 - Live Album",
       "producers": "Martin Birch, Steve Harris",
       "studio": "PMI",
       "recorded": "National Exhibition Centre, Birmingham",
@@ -756,7 +744,7 @@
     },
     {
       "date": "25 March 2013",
-      "title": "MAIDEN ENGLAND '88 - Video",
+      "title": "Maiden England '88 - Video 2013",
       "producers": "Martin Birch, Steve Harris",
       "studio": "PMI",
       "recorded": "National Exhibition Centre, Birmingham",
