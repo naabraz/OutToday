@@ -13,7 +13,7 @@ struct ReleaseDetailsView: View {
             .scaledToFit()
           HStack {
             Text(details.title)
-              .font(.largeTitle)
+              .font(.title2)
               .bold()
           }
           .padding([.bottom])
