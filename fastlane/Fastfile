@@ -20,4 +20,24 @@ platform :ios do
     build_app(scheme: "OutToday")
     pilot(api_key_path: ENV["PILOT_API_KEY_PATH"])
   end
+  lane :app_review do
+    deliver(
+      build_number: '19',
+      submit_for_review: true,
+      automatic_release: true,
+      force: true,
+      # skip_metadata: true,
+      skip_screenshots: true,
+      skip_binary_upload: true,
+      submission_information: {
+        add_id_info_uses_idfa: false
+      },
+      release_notes: {
+      'default' => "Shiny and new",
+      'en-US' => "With this version, we’ve improved our app performance, and we’ve fixed some bugs.
+        We know we can get better, but rest assured we are working on improving your experience every day.
+        How about you download this version and get your check-in done for today?"
+    }
+  )
+  end
 end
