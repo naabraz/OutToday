@@ -1,6 +1,5 @@
 {
-  "Releases": [
-    {
+  "Releases": [{
       "date": "09 November 1979",
       "title": "The Soundhose Tapes - EP/Single",
       "recorded": "Spaceward Studios, Cambridge",
@@ -259,11 +258,18 @@
       "key": "0811"
     },
     {
-      "date": "24 February 1990",
-      "title": "The First Ten Years - Box/Singles",
+      "date": "16 April 1990",
+      "title": "The First Ten Years - LP Box/Singles",
       "studio": "EMI",
       "image": "box-first-ten-years",
-      "key": "2402"
+      "key": "1604"
+    },
+    {
+      "date": "27 June 1990",
+      "title": "The First Ten Years - Japan CD Box/Singles",
+      "studio": "EMI",
+      "image": "box-first-ten-years-japan",
+      "key": "2706"
     },
     {
       "date": "10 September 1990",
